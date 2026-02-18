@@ -1,0 +1,535 @@
+{
+  "meta": {
+    "generated_at": "2026-02-17T23:59:28.372124Z",
+    "firm": "Altiben S.L.",
+    "website": "https://www.altiben.com/",
+    "notes": [
+      "Config includes: routing branches, trigger keywords, chat openers (ES/RU), intake questions (ES/RU), CTA block, and voice macro scripts.",
+      "Pricing is intentionally omitted (no fixed prices in cited site sections)."
+    ]
+  },
+  "brand": {
+    "name": "Altiben S.L.",
+    "tone": {
+      "es": "Profesional, claro, directo, sin promesas de resultado.",
+      "ru": "Деловой, спокойный, прямой, без обещаний результата."
+    },
+    "supported_languages": [
+      "es",
+      "ru",
+      "uk",
+      "en",
+      "fr",
+      "ar"
+    ],
+    "default_language": "es"
+  },
+  "contacts": {
+    "email": "info@altiben.com",
+    "phone": "934191188",
+    "address": "Calle París, 45–47, entresuelo 1ª, 08029 Barcelona, Barcelona",
+    "cta_es": "Si quieres, lo dejo registrado y lo traslado al equipo. Puedes contactar con Altiben por email (info@altiben.com) o por teléfono (934191188).",
+    "cta_ru": "Могу оформить запрос и передать в Altiben. Контакты: info@altiben.com, телефон 934191188, адрес Calle París 45–47 (Barcelona)."
+  },
+  "routing": {
+    "intents": [
+      "fiscal_contable",
+      "laboral",
+      "juridica",
+      "patrimonial",
+      "seguros",
+      "consultoria_empresas",
+      "centro_negocios",
+      "extranjeros",
+      "trafico_dgt",
+      "contacto"
+    ],
+    "fallback_policy": {
+      "max_clarifying_questions": 2,
+      "then": "lead_capture"
+    }
+  },
+  "voice": {
+    "macro_es": "Entendido. Para darte el siguiente paso correcto, necesito dos datos: uno, tu situación exacta; dos, si hay un plazo. Te lo dejo listo y te indico cómo contactar con Altiben por email o teléfono.",
+    "macro_ru": "Понял. Чтобы дать правильный следующий шаг, нужны два факта: что именно требуется и есть ли срок. После этого сразу дам список документов и контакт Altiben (email/телефон).",
+    "rules": [
+      "8–15 секунд на реплику",
+      "длинные списки отправлять в чат, голосом — 3–5 пунктов",
+      "в каждом ответе: короткое резюме → 1–2 вопроса → CTA"
+    ]
+  },
+  "branches": {
+    "fiscal_contable": {
+      "label_es": "Asesoría Fiscal y Contable",
+      "label_ru": "Налоговая и бухгалтерская поддержка",
+      "triggers": {
+        "es": [
+          "iva",
+          "irpf",
+          "impuestos",
+          "contabilidad",
+          "libros",
+          "cuentas anuales",
+          "inspección",
+          "requerimiento",
+          "hacienda",
+          "deuda",
+          "recaudación"
+        ],
+        "ru": [
+          "налоги",
+          "декларация",
+          "бухгалтерия",
+          "учёт",
+          "годовая отчётность",
+          "требование",
+          "проверка",
+          "инспекция",
+          "долг"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: tema fiscal/contable. En Altiben podemos ayudar con contabilidad, declaraciones y liquidaciones, libros oficiales, cuentas anuales y gestiones/recursos ante la Administración.\n\nPara orientarte rápido:\n1) ¿Eres particular, autónomo o empresa?\n2) ¿Qué necesitas exactamente (declaración, contabilidad, cuentas anuales, requerimiento/inspección)?\n3) ¿Hay algún plazo o carta/notificación?\n\nCon eso te indico qué documentación preparar y el siguiente paso.",
+        "ru": "Понял: налоговый/бухгалтерский вопрос. В Altiben ведут бухгалтерию, декларации и расчёты налогов, “libros oficiales”, годовую отчётность (“cuentas anuales”) и коммуникации/обжалования с налоговой администрацией.\n\nЧтобы быстро сориентировать:\n1) Вы частное лицо, autónomo или компания?\n2) Что нужно: декларация/учёт/годовая отчётность/ответ на требование/проверка?\n3) Есть дедлайн или письмо?\n\nПосле этого дам чек‑лист документов и следующий шаг."
+      },
+      "intake_questions": {
+        "es": [
+          "¿Eres particular, autónomo o empresa?",
+          "¿En qué provincia/ciudad es el asunto?",
+          "¿Qué necesitas exactamente (declaración, contabilidad, cuentas anuales, requerimiento/inspección)?",
+          "¿Hay algún plazo o notificación oficial?"
+        ],
+        "ru": [
+          "Вы частное лицо, autónomo или компания?",
+          "В какой провинции/городе вопрос?",
+          "Что именно нужно (декларация, бухгалтерия, cuentas anuales, требование/проверка)?",
+          "Есть ли срок/уведомление?"
+        ]
+      },
+      "documents_hint": {
+        "es": [
+          "Notificación/requerimiento (si existe)",
+          "Últimas declaraciones presentadas",
+          "Resumen ingresos/gastos",
+          "Comunicaciones previas"
+        ],
+        "ru": [
+          "Письмо/требование (если есть)",
+          "Последние поданные декларации",
+          "Свод доходов/расходов",
+          "Предыдущая переписка"
+        ]
+      }
+    },
+    "laboral": {
+      "label_es": "Asesoría Laboral",
+      "label_ru": "Трудовое сопровождение",
+      "triggers": {
+        "es": [
+          "nómina",
+          "nomina",
+          "seguridad social",
+          "contrato",
+          "despido",
+          "finiquito",
+          "ere",
+          "juicio laboral",
+          "alta",
+          "baja"
+        ],
+        "ru": [
+          "трудовой",
+          "зарплата",
+          "увольнение",
+          "контракт",
+          "взносы",
+          "seguridad social",
+          "ere",
+          "суд"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: tema laboral. Altiben trabaja nóminas, seguros sociales, altas/bajas en Seguridad Social, contratos, finiquitos, despidos, ERE, conciliaciones y juicios laborales.\n\n1) ¿Eres empresa o trabajador?\n2) ¿Cuál es el problema principal (contrato, nómina, despido, deuda SS, juicio)?\n3) ¿Fechas clave y plazo?\n\nCon esto preparo el siguiente paso y documentación.",
+        "ru": "Понял: трудовой вопрос. В Altiben делают nóminas, взносы/Seguridad Social, altas/bajas, контракты, finiquitos, despidos, ERE, conciliaciones и трудовые процессы.\n\n1) Вы работодатель или работник?\n2) В чём суть: контракт/зарплата/увольнение/долг SS/суд?\n3) Ключевые даты и дедлайн?\n\nПосле этого дам план и документы."
+      },
+      "intake_questions": {
+        "es": [
+          "¿Eres empresa o trabajador?",
+          "¿Cuál es el problema principal (contrato, nómina, despido, deuda SS, juicio)?",
+          "¿Fechas clave y plazo?",
+          "¿Qué documentos tienes (contrato, nóminas, cartas, comunicaciones)?"
+        ],
+        "ru": [
+          "Вы работодатель или работник?",
+          "Суть: контракт/зарплата/увольнение/долг SS/суд?",
+          "Ключевые даты и дедлайн?",
+          "Какие документы есть (контракт, nóminas, письма, переписка)?"
+        ]
+      },
+      "documents_hint": {
+        "es": [
+          "Contrato",
+          "Nóminas",
+          "Carta de despido o comunicaciones",
+          "Vida laboral si la tienes"
+        ],
+        "ru": [
+          "Контракт",
+          "Nóminas",
+          "Письмо/уведомления",
+          "Vida laboral (если есть)"
+        ]
+      }
+    },
+    "juridica": {
+      "label_es": "Asesoría Jurídica",
+      "label_ru": "Юридическое сопровождение",
+      "triggers": {
+        "es": [
+          "civil",
+          "administrativo",
+          "mercantil",
+          "juicio",
+          "demanda",
+          "sociedad",
+          "acciones",
+          "disolución",
+          "constitución"
+        ],
+        "ru": [
+          "суд",
+          "иск",
+          "гражданское",
+          "административное",
+          "коммерческое",
+          "общество",
+          "доля",
+          "акции",
+          "ликвидация"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: asesoría jurídica. Altiben cubre procesos civiles, administrativos, mercantiles y laborales, y asesoramiento sobre sociedades (constitución/disolución) y compraventa de acciones.\n\n1) ¿De qué tipo es el asunto (civil/administrativo/mercantil/laboral)?\n2) ¿Está ya en trámite judicial o aún no?\n3) ¿Hay plazos (notificación, citación, requerimiento)?",
+        "ru": "Понял: юридическое сопровождение. В Altiben ведут civil/administrativo/mercantil/laboral процессы и консультируют по обществам (создание/ликвидация) и купле‑продаже акций.\n\n1) Тип: гражданское/админ/коммерческое/трудовое?\n2) Уже суд/процедура или ещё нет?\n3) Есть сроки по уведомлению/повестке?"
+      },
+      "intake_questions": {
+        "es": [
+          "¿Qué tipo de asunto es (civil/administrativo/mercantil/laboral)?",
+          "¿En qué fase está (previo, demanda presentada, vista, recurso)?",
+          "¿Hay plazos o notificaciones?",
+          "¿Qué documentos tienes (contratos, demanda, comunicaciones)?"
+        ],
+        "ru": [
+          "Какой тип дела (гражданское/админ/коммерческое/трудовое)?",
+          "Стадия (до суда/иск подан/заседание/обжалование)?",
+          "Есть сроки/уведомления?",
+          "Какие документы есть (договоры, иск, переписка)?"
+        ]
+      }
+    },
+    "patrimonial": {
+      "label_es": "Asesoría Patrimonial",
+      "label_ru": "Патримониальная поддержка",
+      "triggers": {
+        "es": [
+          "patrimonio",
+          "renta",
+          "complementaria",
+          "alegaciones",
+          "recurso"
+        ],
+        "ru": [
+          "патримони",
+          "renta",
+          "допдекларация",
+          "возражение",
+          "обжалование"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: patrimonio/renta. Altiben gestiona confección y tramitación, complementarias, alegaciones y recursos.\n\n1) ¿Qué necesitas: renta/patrimonio, complementaria o recurso/alegaciones?\n2) ¿Cuál es el motivo (error, omisión, requerimiento)?\n3) ¿Plazo y documentos disponibles?",
+        "ru": "Понял: renta/patrimonio. В Altiben делают подачу/сопровождение, “complementarias”, а также “alegaciones y recursos”.\n\n1) Что именно: доп.декларация / возражения‑обжалование / сопровождение декларации?\n2) Причина: ошибка/пропуск/требование?\n3) Дедлайн и какие документы есть?"
+      },
+      "intake_questions": {
+        "es": [
+          "¿Qué trámite necesitas (renta/patrimonio, complementaria, alegaciones/recurso)?",
+          "¿Motivo?",
+          "¿Plazo?",
+          "¿Documentos disponibles?"
+        ],
+        "ru": [
+          "Какой процесс (renta/patrimonio, complementaria, alegaciones/recurso)?",
+          "Причина?",
+          "Срок?",
+          "Документы?"
+        ]
+      }
+    },
+    "seguros": {
+      "label_es": "Asesoría de Seguros",
+      "label_ru": "Страховое сопровождение",
+      "triggers": {
+        "es": [
+          "seguro",
+          "póliza",
+          "poliza",
+          "hogar",
+          "vida",
+          "auto",
+          "aseguradora",
+          "siniestro"
+        ],
+        "ru": [
+          "страховка",
+          "полис",
+          "страховой случай",
+          "дом",
+          "жизнь",
+          "авто",
+          "страховая"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: seguros. Altiben asesora sobre pólizas y la relación cliente/aseguradora (hogar, vida, automóvil).\n\n1) ¿Qué tipo de seguro es?\n2) ¿Qué ocurrió y cuándo?\n3) ¿Tienes póliza o número de expediente?",
+        "ru": "Понял: страховой вопрос. Altiben консультируют по полисам и ведут коммуникацию клиент–страховая (hogar/vida/auto).\n\n1) Тип страховки?\n2) Что случилось и когда?\n3) Есть полис/номер дела?"
+      },
+      "intake_questions": {
+        "es": [
+          "Tipo de seguro",
+          "Hecho y fecha",
+          "¿Número de póliza/expediente?",
+          "¿Qué te respondió la aseguradora (si aplica)?"
+        ],
+        "ru": [
+          "Тип страховки",
+          "Событие и дата",
+          "Номер полиса/дела?",
+          "Что ответила страховая (если было)"
+        ]
+      }
+    },
+    "consultoria_empresas": {
+      "label_es": "Consultoría de Empresas",
+      "label_ru": "Консалтинг для компаний",
+      "triggers": {
+        "es": [
+          "valoración",
+          "valoracion",
+          "viabilidad",
+          "análisis financiero",
+          "analisis financiero",
+          "fusión",
+          "fusion",
+          "adquisición",
+          "adquisicion",
+          "liquidación",
+          "liquidacion"
+        ],
+        "ru": [
+          "оценка бизнеса",
+          "viability",
+          "финанализ",
+          "слияние",
+          "поглощение",
+          "покупка бизнеса",
+          "ликвидация"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: consultoría empresarial. Altiben ofrece valoración de empresas, análisis económico‑financiero, planes de viabilidad, análisis contable y procesos de fusión/absorción/adquisición/liquidación.\n\n1) ¿Qué objetivo tienes (valoración, viabilidad, M&A, diagnóstico)?\n2) Sector y tamaño aproximado.\n3) ¿Para cuándo lo necesitas?",
+        "ru": "Понял: консалтинг для бизнеса. Altiben делают valuation, анализ финсостояния, планы жизнеспособности, анализ отчётности и сопровождение M&A/ликвидации.\n\n1) Цель: оценка/viability/M&A/диагностика?\n2) Отрасль и масштаб.\n3) Сроки?"
+      },
+      "intake_questions": {
+        "es": [
+          "Objetivo",
+          "Sector",
+          "Tamaño aproximado",
+          "Plazo",
+          "¿Hay estados financieros disponibles?"
+        ],
+        "ru": [
+          "Цель",
+          "Отрасль",
+          "Масштаб",
+          "Срок",
+          "Есть ли отчётность?"
+        ]
+      }
+    },
+    "centro_negocios": {
+      "label_es": "Centro de Negocios",
+      "label_ru": "Бизнес-центр",
+      "triggers": {
+        "es": [
+          "despacho",
+          "sala de reunión",
+          "sala de reuniones",
+          "coworking",
+          "domiciliación",
+          "domiciliacion",
+          "oficina",
+          "correspondencia"
+        ],
+        "ru": [
+          "офис",
+          "кабинет",
+          "переговорная",
+          "coworking",
+          "домицилиация",
+          "адрес",
+          "корреспонденция"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: centro de negocios (Barcelona). Altiben ofrece alquiler de despachos/salas, domiciliación fiscal y gestión de dirección (correspondencia, llamadas, etc.).\n\n1) ¿Qué necesitas: despacho, sala, coworking o domiciliación?\n2) ¿Para cuántas personas y con qué frecuencia?\n3) ¿Plazo (días/meses)?",
+        "ru": "Понял: бизнес‑центр. У Altiben есть аренда кабинетов/переговорных, domiciliación fiscal и управление адресом (корреспонденция/звонки).\n\n1) Что нужно: кабинет/переговорка/coworking/domiciliación?\n2) Сколько людей и как часто?\n3) На какой срок?"
+      },
+      "intake_questions": {
+        "es": [
+          "Servicio (despacho/sala/coworking/domiciliación)",
+          "Personas/frecuencia",
+          "Plazo",
+          "¿Necesitas gestión de correspondencia/llamadas?"
+        ],
+        "ru": [
+          "Услуга (кабинет/переговорка/coworking/domiciliación)",
+          "Сколько людей/частота",
+          "Срок",
+          "Нужны ли услуги адреса (почта/звонки)?"
+        ]
+      }
+    },
+    "extranjeros": {
+      "label_es": "Servicios para extranjeros",
+      "label_ru": "Услуги для иностранцев",
+      "triggers": {
+        "es": [
+          "extranjería",
+          "extranjeria",
+          "visado",
+          "residencia",
+          "reubicación",
+          "reubicacion",
+          "abrir negocio",
+          "importación",
+          "importacion",
+          "exportación",
+          "exportacion",
+          "inmueble",
+          "activos"
+        ],
+        "ru": [
+          "внж",
+          "виза",
+          "extranjería",
+          "релокация",
+          "открыть бизнес",
+          "импорт",
+          "экспорт",
+          "недвижимость",
+          "активы"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: servicios para extranjeros. Altiben trabaja extranjería/visados, apertura de negocio, import‑export, reubicación y compra/venta de inmuebles y gestión de activos.\n\n1) ¿Cuál es tu objetivo principal (visado/residencia, abrir negocio, reubicación, import‑export, inmuebles)?\n2) ¿Dónde estás ahora y cuál es tu estatus?\n3) ¿Hay plazos?",
+        "ru": "Понял: услуги для иностранцев. В Altiben есть направления: extranjería/визы, открытие бизнеса, import/export, релокация, недвижимость и управление активами.\n\n1) Ваша цель: ВНЖ/виза, бизнес, релокация, импорт/экспорт, недвижимость?\n2) Где вы сейчас и какой статус?\n3) Есть сроки?"
+      },
+      "intake_questions": {
+        "es": [
+          "Objetivo principal",
+          "País/ciudad actual",
+          "Estatus actual",
+          "Plazo",
+          "Documentación disponible"
+        ],
+        "ru": [
+          "Цель",
+          "Где вы сейчас",
+          "Текущий статус",
+          "Сроки",
+          "Какие документы есть"
+        ]
+      }
+    },
+    "trafico_dgt": {
+      "label_es": "Tráfico (DGT)",
+      "label_ru": "Trámites DGT",
+      "triggers": {
+        "es": [
+          "dgt",
+          "cambio de nombre",
+          "transferencia",
+          "matriculación",
+          "matriculacion",
+          "baja",
+          "alta",
+          "duplicado",
+          "carné",
+          "carne"
+        ],
+        "ru": [
+          "dgt",
+          "смена владельца",
+          "перерегистрация",
+          "регистрация",
+          "снятие",
+          "дубликат",
+          "права"
+        ]
+      },
+      "chat_open": {
+        "es": "Entendido: trámites DGT. Altiben gestiona cambio de nombre, matriculación (nuevo/importación UE), altas/bajas y duplicados/renovación según el caso.\n\n1) ¿Qué trámite necesitas exactamente?\n2) ¿Vehículo de España o importado?\n3) ¿Hay urgencia o cita ya programada?",
+        "ru": "Понял: процедуры DGT. В Altiben делают смену владельца, регистрацию (в т.ч. импорт из ЕС), altas/bajas и дубликаты/обновления по ситуации.\n\n1) Какой именно процесс?\n2) Авто местное или импорт?\n3) Срочно или обычный срок?"
+      },
+      "intake_questions": {
+        "es": [
+          "Trámite exacto",
+          "Vehículo local o importado",
+          "Plazo/urgencia",
+          "Documentos disponibles"
+        ],
+        "ru": [
+          "Какой процесс",
+          "Местное или импорт",
+          "Срок/срочность",
+          "Документы"
+        ]
+      }
+    },
+    "contacto": {
+      "label_es": "Contacto",
+      "label_ru": "Контакты",
+      "triggers": {
+        "es": [
+          "contacto",
+          "teléfono",
+          "telefono",
+          "email",
+          "dirección",
+          "direccion",
+          "horario"
+        ],
+        "ru": [
+          "контакты",
+          "телефон",
+          "почта",
+          "email",
+          "адрес",
+          "как связаться"
+        ]
+      },
+      "chat_open": {
+        "es": "Contacto Altiben: email info@altiben.com, teléfono 934191188, oficina en Calle París 45–47 (entresuelo 1ª), Barcelona.",
+        "ru": "Контакты Altiben: email info@altiben.com, телефон 934191188, офис Calle París 45–47 (entresuelo 1ª), Barcelona."
+      },
+      "intake_questions": {
+        "es": [
+          "¿Prefieres email o teléfono para que te contacten?"
+        ],
+        "ru": [
+          "Как удобнее связаться: email или телефон?"
+        ]
+      }
+    }
+  }
+}

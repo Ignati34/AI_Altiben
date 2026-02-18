@@ -1,0 +1,25 @@
+{FIRM_NAME}/
+├── backend/                # Папка для серверной части (Python)
+│   ├── main.py             # <-- Сюда размещаем файл main.py
+│   ├── app/                # Логика приложения (роуты, модели)
+│   ├── services/           # Работа с AI, базой знаний, OCR
+│   ├── requirements.txt    # Зависимости Python
+│   └── .env                # Секретные ключи (API keys, DB passwords)
+│
+├── frontend/               # Папка для виджета (JavaScript/React)
+│   ├── src/
+│   │   ├── components/     # Компоненты интерфейса
+│   │   ├── widget.js       # <-- Сюда размещаем файл widget.js (или как entry point)
+│   │   └── styles.css      # Стили виджета
+│   ├── package.json        # Зависимости Node.js
+│   └── build/              # Скомпилированная версия для вставки на сайт
+│
+├── kb_sources/             # Папка для базы знаний (PDF, DOCX)
+│   ├── tax_laws_2024.pdf
+│   └── internal_rules.docx
+│
+├── uploads/                # Временное хранилище загруженных пользователем файлов
+│   └── .gitignore          # Важно: эта папка не должна попадать в git
+│
+├── docker-compose.yml      # Для запуска всего проекта одной командой
+└── README.md               # Инструкция по запуску

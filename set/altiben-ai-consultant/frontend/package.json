@@ -1,0 +1,11 @@
+{
+    "name": "altiben-widget",
+    "version": "1.0.0",
+    "description": "AI Consultant Widget for Altiben",
+    "main": "src/widget.js",
+    "scripts": {
+      "build": "echo 'Build script placeholder'",
+      "start": "echo 'Start script placeholder'"
+    },
+    "dependencies": {}
+  }
