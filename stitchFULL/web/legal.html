@@ -1,0 +1,136 @@
+cat > legal.html <<'EOF'
+<!DOCTYPE html>
+<html class="light" lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Altiben S.L. | Правовое уведомление</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: { "primary": "#e50615", "background-light": "#ffffff", "background-dark": "#000000" },
+          fontFamily: { "display": ["Inter", "sans-serif"] },
+          borderRadius: { "DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    body { font-family: 'Inter', sans-serif; }
+    .nav-sticky { position: sticky; top: 0; z-index: 50; background-color: rgba(255,255,255,0.95); backdrop-filter: blur(8px); }
+  </style>
+</head>
+
+<body class="dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300 bg-white">
+
+<header class="nav-sticky border-b border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a class="flex items-center gap-3" href="index.html#top">
+      <div class="bg-primary p-1.5 rounded-lg flex items-center justify-center bg-[#e50615]">
+        <span class="material-symbols-outlined text-white text-2xl">account_balance</span>
+      </div>
+      <div class="text-xl font-bold tracking-tight text-[#e50615]">Altiben S.L.</div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-10">
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="index.html#top">Главная</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="index.html#services">Услуги</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="index.html#about">О нас</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="index.html#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 py-16">
+  <div class="mb-10">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold text-[#e50615]">
+      <span class="material-symbols-outlined text-sm">gavel</span> Документ
+    </div>
+    <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-black dark:text-slate-100">Правовое уведомление</h1>
+    <p class="mt-4 text-slate-600 dark:text-slate-400">
+      Шаблон для сайта. Вставь официальные реквизиты компании в поля <span class="font-semibold text-[#e50615]">[уточнить]</span>.
+    </p>
+  </div>
+
+  <section class="space-y-8">
+    <div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <h2 class="text-xl font-bold text-black dark:text-slate-100">1) Данные владельца сайта</h2>
+      <ul class="mt-4 list-disc pl-6 text-slate-600 dark:text-slate-400 space-y-2">
+        <li>Компания: <span class="font-semibold">Altiben S.L.</span></li>
+        <li>CIF/NIF: <span class="text-[#e50615]">[уточнить]</span></li>
+        <li>Юридический адрес: <span class="text-[#e50615]">[уточнить]</span></li>
+        <li>Контакт: <a class="font-bold text-[#e50615]" href="mailto:info@altiben.es">info@altiben.es</a> · <a class="font-bold text-[#e50615]" href="tel:+34931234567">+34 93 123 45 67</a></li>
+      </ul>
+    </div>
+
+    <div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <h2 class="text-xl font-bold text-black dark:text-slate-100">2) Условия использования</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400">
+        Используя сайт, вы соглашаетесь с настоящими условиями. Информация на сайте носит общий характер и не является индивидуальной консультацией,
+        пока не подтверждена в рамках договорных отношений.
+      </p>
+    </div>
+
+    <div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <h2 class="text-xl font-bold text-black dark:text-slate-100">3) Интеллектуальная собственность</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400">
+        Все тексты, дизайн, логотипы и элементы сайта защищены. Любое использование материалов без согласия правообладателя запрещено,
+        кроме случаев, прямо предусмотренных законом.
+      </p>
+    </div>
+
+    <div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <h2 class="text-xl font-bold text-black dark:text-slate-100">4) Ограничение ответственности</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400">
+        Мы стремимся поддерживать актуальность информации, но не гарантируем отсутствие ошибок. Мы не отвечаем за убытки, возникшие в результате
+        использования материалов сайта без подтверждения у специалиста и без учёта конкретных обстоятельств.
+      </p>
+    </div>
+
+    <div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <h2 class="text-xl font-bold text-black dark:text-slate-100">5) Ссылки на сторонние ресурсы</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400">
+        Сайт может содержать ссылки на внешние ресурсы. Мы не контролируем их содержание и не отвечаем за их политику или доступность.
+      </p>
+    </div>
+
+    <div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <h2 class="text-xl font-bold text-black dark:text-slate-100">6) Применимое право и юрисдикция</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400">
+        Применимое право: Испания. Компетентные суды: <span class="text-[#e50615]">[уточнить город/провинцию, обычно Barcelona]</span>.
+      </p>
+    </div>
+  </section>
+
+  <div class="mt-12">
+    <a class="inline-flex items-center gap-2 font-bold text-[#e50615]" href="index.html#top">
+      <span class="material-symbols-outlined text-sm">arrow_back</span> На главную
+    </a>
+  </div>
+</main>
+
+<footer class="bg-slate-100 dark:bg-slate-900/50 py-12 border-t border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div class="text-sm text-slate-500">© 2024 Altiben S.L. Все права защищены.</div>
+    <div class="flex flex-wrap gap-6 text-sm">
+      <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="privacy.html">Конфиденциальность</a>
+      <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="legal.html">Правовое уведомление</a>
+      <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="cookies.html">Cookies</a>
+      <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="careers.html">Карьера</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+EOF

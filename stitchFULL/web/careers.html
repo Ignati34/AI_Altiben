@@ -1,0 +1,162 @@
+cat > careers.html <<'EOF'
+<!DOCTYPE html>
+<html class="light" lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Altiben S.L. | Карьера</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: { "primary": "#e50615", "background-light": "#ffffff", "background-dark": "#000000" },
+          fontFamily: { "display": ["Inter", "sans-serif"] },
+          borderRadius: { "DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    body { font-family: 'Inter', sans-serif; }
+    .nav-sticky { position: sticky; top: 0; z-index: 50; background-color: rgba(255,255,255,0.95); backdrop-filter: blur(8px); }
+  </style>
+</head>
+
+<body class="dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300 bg-white">
+
+<header class="nav-sticky border-b border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a class="flex items-center gap-3" href="index.html#top">
+      <div class="bg-primary p-1.5 rounded-lg flex items-center justify-center bg-[#e50615]">
+        <span class="material-symbols-outlined text-white text-2xl">account_balance</span>
+      </div>
+      <div class="text-xl font-bold tracking-tight text-[#e50615]">Altiben S.L.</div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-10">
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="index.html#top">Главная</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="index.html#services">Услуги</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="index.html#about">О нас</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="index.html#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-16">
+  <div class="mb-12">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold text-[#e50615]">
+      <span class="material-symbols-outlined text-sm">work</span> Вакансии
+    </div>
+    <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-black dark:text-slate-100">Карьера в Altiben S.L.</h1>
+    <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl">
+      Мы ищем людей, которые любят порядок в цифрах, умеют говорить с клиентом по делу и держат дедлайны.
+      Если подходишь — отправляй резюме.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <section class="lg:col-span-2 space-y-6">
+      <article class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <h2 class="text-xl font-bold text-black dark:text-slate-100">Ассистент по бухгалтерии / Administrativo</h2>
+            <p class="mt-2 text-sm text-slate-500">Барселона · Full-time · Гибрид <span class="text-[#e50615]">[уточнить]</span></p>
+          </div>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+            Entry / Middle
+          </span>
+        </div>
+        <ul class="mt-4 list-disc pl-6 text-slate-600 dark:text-slate-400 space-y-2">
+          <li>Первичная документация, счета, сверки.</li>
+          <li>Подготовка пакетов для отчётности.</li>
+          <li>Коммуникации с клиентами по статусам задач.</li>
+        </ul>
+        <p class="mt-4 text-slate-600 dark:text-slate-400">
+          Требования: аккуратность, испанский <span class="text-[#e50615]">[уровень]</span>, опыт с <span class="text-[#e50615]">[инструменты/ERP]</span>.
+        </p>
+      </article>
+
+      <article class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <h2 class="text-xl font-bold text-black dark:text-slate-100">Налоговый консультант / Asesor fiscal</h2>
+            <p class="mt-2 text-sm text-slate-500">Барселона · Full-time <span class="text-[#e50615]">[уточнить]</span></p>
+          </div>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+            Middle / Senior
+          </span>
+        </div>
+        <ul class="mt-4 list-disc pl-6 text-slate-600 dark:text-slate-400 space-y-2">
+          <li>Консультации по налогам для физ. и юр. лиц.</li>
+          <li>Подготовка/проверка деклараций и сопровождение клиентов.</li>
+          <li>Ведение кейсов и коммуникация с органами <span class="text-[#e50615]">[если применимо]</span>.</li>
+        </ul>
+        <p class="mt-4 text-slate-600 dark:text-slate-400">
+          Требования: опыт в Испании <span class="text-[#e50615]">[N лет]</span>, уверенный испанский, ответственность за результат.
+        </p>
+      </article>
+
+      <article class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <h2 class="text-xl font-bold text-black dark:text-slate-100">Нет подходящей вакансии?</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">
+          Отправь CV и короткое письмо: кто ты, чем полезен, какой формат занятости интересен.
+        </p>
+        <a class="mt-5 inline-flex items-center gap-2 bg-[#e50615] text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/30 transition-all"
+           href="mailto:info@altiben.es?subject=CV%20для%20Altiben%20S.L.&body=Здравствуйте!%0A%0AМеня%20зовут%20...%0AИнтересует%20позиция%20...%0AКлючевые%20навыки%3A%20...%0A%0AСсылка%20на%20LinkedIn%3A%20...%0A%0AСпасибо!">
+          Отправить CV
+          <span class="material-symbols-outlined text-sm">send</span>
+        </a>
+      </article>
+    </section>
+
+    <aside class="space-y-6">
+      <div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <h3 class="text-lg font-bold text-black dark:text-slate-100">Контакты HR</h3>
+        <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">Email: <a class="font-bold text-[#e50615]" href="mailto:info@altiben.es">info@altiben.es</a></p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Телефон: <a class="font-bold text-[#e50615]" href="tel:+34931234567">+34 93 123 45 67</a></p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Адрес: Av. Diagonal, 456, 08006 Barcelona</p>
+      </div>
+
+      <div class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <h3 class="text-lg font-bold text-black dark:text-slate-100">Что ценим</h3>
+        <ul class="mt-4 list-disc pl-6 text-slate-600 dark:text-slate-400 space-y-2">
+          <li>Точность и дисциплина.</li>
+          <li>Понятная коммуникация с клиентом.</li>
+          <li>Конфиденциальность.</li>
+          <li>Стабильный темп и ответственность.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div class="mt-12">
+    <a class="inline-flex items-center gap-2 font-bold text-[#e50615]" href="index.html#top">
+      <span class="material-symbols-outlined text-sm">arrow_back</span> На главную
+    </a>
+  </div>
+</main>
+
+<footer class="bg-slate-100 dark:bg-slate-900/50 py-12 border-t border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div class="text-sm text-slate-500">© 2024 Altiben S.L. Все права защищены.</div>
+    <div class="flex flex-wrap gap-6 text-sm">
+      <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="privacy.html">Конфиденциальность</a>
+      <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="legal.html">Правовое уведомление</a>
+      <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="cookies.html">Cookies</a>
+      <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="careers.html">Карьера</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+EOF
