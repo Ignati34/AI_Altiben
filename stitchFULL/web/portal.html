@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Altiben S.L. | Client Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#351a5b",
+                        "accent": "#e30613",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#18131f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .receipt-gradient {
+            background: linear-gradient(135deg, rgba(53, 26, 91, 0.05) 0%, rgba(227, 6, 19, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-64 bg-primary text-white flex flex-col fixed h-full z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="size-10 bg-white rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-accent text-3xl font-bold">account_balance</span>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-tight">Altiben S.L.</h1>
+<p class="text-xs text-slate-300">Tax Consultancy</p>
+</div>
+</div>
+<nav class="flex-1 px-4 py-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/10 text-white" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 text-slate-300 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm font-medium">My Documents</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 text-slate-300 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-sm font-medium">Receipts</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 text-slate-300 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="text-sm font-medium">Subscription</span>
+</a>
+<div class="pt-4 mt-4 border-t border-white/10">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 text-slate-300 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</div>
+</nav>
+<div class="p-4 bg-black/20 m-4 rounded-xl">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Current Plan</span>
+<span class="px-2 py-0.5 rounded-full bg-accent text-[10px] font-bold text-white uppercase">Premium</span>
+</div>
+<p class="text-xs text-slate-300 mb-3">Priority tax assistance &amp; AI insights active.</p>
+<button class="w-full py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-bold transition-all border border-white/5">
+                Manage Billing
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 min-h-screen">
+<!-- Header -->
+<header class="h-16 bg-white dark:bg-background-dark/50 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 sticky top-0 z-40 backdrop-blur-md">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search documents, receipts, or insights..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-0 right-0 size-2 bg-accent rounded-full border-2 border-white"></span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:border-slate-800"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Carlos Mendoza</p>
+<p class="text-xs text-slate-500">Altiben S.L. Client</p>
+</div>
+<div class="size-10 rounded-full bg-primary/10 border border-primary/20 overflow-hidden">
+<img alt="User Profile" data-alt="Professional male portrait for profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8odFzRrvNvYHS6Fx2H0Jab-sJaManGD3VF_LDcMYSRvEVvpGfNHYdt1OCd1ytRXOXJ4TRf_KH9w6Qijt7W__U4mbsTDtmtVRipAtCssB2JH6WeViHE739X-VAp9GEcK4mBFntf0X_o1CH9ovM1kBHIec7pv4h9XD4aX_rwGSkZqxBLKeV9WeqLCNKBtveCXNziTGbw9RYkP_4mVXoXt12PDxrGa_9DhNpCza4Q3pUzTQKMo53EHBeSZTaz5sel7uGKap9ONaXiT8"/>
+</div>
+</div>
+</div>
+</header>
+<div class="p-8 space-y-8">
+<!-- Stats Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">+2 today</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Pending Approval</p>
+<h3 class="text-2xl font-bold mt-1">12 Documents</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-emerald-100 rounded-lg text-emerald-600">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">+12.4%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Monthly Expenses</p>
+<h3 class="text-2xl font-bold mt-1">€4,250.32</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-accent/10 rounded-lg text-accent">
+<span class="material-symbols-outlined">event_busy</span>
+</div>
+<span class="text-xs font-bold text-accent bg-accent/5 px-2 py-1 rounded">Urgent</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Tax Deadline</p>
+<h3 class="text-2xl font-bold mt-1">14 Days Remaining</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Document Center -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Standard Upload -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+                                Document Center
+                            </h2>
+</div>
+<div class="bg-white dark:bg-slate-900 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-10 flex flex-col items-center justify-center text-center transition-all hover:border-primary/40 hover:bg-slate-50/50">
+<div class="size-16 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-slate-400">upload_file</span>
+</div>
+<h4 class="text-lg font-bold mb-1">Drag and drop documents here</h4>
+<p class="text-sm text-slate-500 mb-6">Support for PDF, JPG, and PNG files up to 10MB</p>
+<button class="px-6 py-2.5 bg-primary text-white rounded-lg font-bold text-sm shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                                Browse Files
+                            </button>
+</div>
+</section>
+<!-- Receipt Scanner UI -->
+<section class="receipt-gradient rounded-2xl p-6 border border-primary/10">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="text-xl font-bold flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">receipt_long</span>
+                                    Receipt Scanner
+                                </h2>
+<p class="text-xs text-slate-600 mt-1">Fast-track your expense tracking with OCR technology</p>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-lg font-bold text-sm hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-sm">add_a_photo</span>
+                                Scan Receipt
+                            </button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<!-- Receipt Item -->
+<div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm group">
+<div class="aspect-[3/4] rounded-md bg-slate-100 dark:bg-slate-900 mb-2 relative overflow-hidden">
+<img alt="Receipt Preview" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform" data-alt="Close up photo of a printed store receipt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAtxIAVzzM3prls7qCehIrU2BLuiLEHPaLoQ4W3L-D7Sz_QJ8YMxVuggRHJdU_g5jp2kQoEuZOwxpnY5jWfbyHArOPpcOpQhBpxxTSVs-_EsLDzUowm-YmxSp5EAf2TiF7Ju7WJ3CKU_u5NsDtYuGSpGw89DnfZY07MRcKzW7VD9VsBBxiAtmh3vNskMnEfYmP-PRM3FUDK5xOSlg85jzMbrE7aPT-4D3jnu6pnVluc7SWdjMwArPKm2coIeyttHid4LczsRuRNck"/>
+<div class="absolute inset-0 flex items-center justify-center flex-col gap-1">
+<span class="material-symbols-outlined text-emerald-600">check_circle</span>
+<span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">VERIFIED</span>
+</div>
+</div>
+<p class="text-[10px] font-bold text-slate-400 truncate">Starbucks Coffee - €4.50</p>
+</div>
+<!-- Receipt Item (Processing) -->
+<div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm group">
+<div class="aspect-[3/4] rounded-md bg-slate-100 dark:bg-slate-900 mb-2 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 flex items-center justify-center flex-col gap-2">
+<div class="size-6 border-2 border-primary/20 border-t-primary rounded-full animate-spin"></div>
+<span class="text-[10px] font-bold text-primary animate-pulse">EXTRACTING...</span>
+</div>
+</div>
+<p class="text-[10px] font-bold text-slate-400 truncate">Amazon.es - Processing</p>
+</div>
+<!-- Placeholder -->
+<div class="aspect-[3/4] border-2 border-dashed border-slate-300 dark:border-slate-800 rounded-lg flex flex-col items-center justify-center text-slate-400 hover:border-primary/40 hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-3xl">add</span>
+<span class="text-[10px] font-bold mt-1">NEW SCAN</span>
+</div>
+</div>
+</section>
+</div>
+<!-- AI Insights Panel -->
+<div class="space-y-6">
+<section class="bg-primary text-white rounded-2xl p-6 shadow-xl shadow-primary/20 h-full">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 bg-white/20 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white">psychology</span>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight">AI Insights</h2>
+<p class="text-xs text-white/60">Live Analysis Status</p>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Processing Item -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-white/80">VAT Return Prep (Q3)</span>
+<span class="text-white font-bold">85%</span>
+</div>
+<div class="w-full bg-white/10 rounded-full h-1.5 overflow-hidden">
+<div class="bg-accent h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
+</div>
+<p class="text-[10px] text-white/50 italic flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">info</span>
+                                    Categorizing 45 new expense entries...
+                                </p>
+</div>
+<!-- Processing Item -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-white/80">Profit/Loss Optimization</span>
+<span class="text-white font-bold">42%</span>
+</div>
+<div class="w-full bg-white/10 rounded-full h-1.5 overflow-hidden">
+<div class="bg-white/60 h-full rounded-full transition-all duration-1000" style="width: 42%"></div>
+</div>
+</div>
+<!-- Insights Card -->
+<div class="bg-white/10 rounded-xl p-4 border border-white/10">
+<div class="flex items-center gap-2 mb-2 text-accent">
+<span class="material-symbols-outlined text-sm">lightbulb</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Action Required</span>
+</div>
+<p class="text-xs text-white/90 leading-relaxed">
+                                    Detected 3 receipts without valid TAX IDs. Click here to update them for deduction.
+                                </p>
+<button class="mt-3 text-[10px] font-bold underline text-white/70 hover:text-white">
+                                    Resolve Now
+                                </button>
+</div>
+<div class="pt-4 border-t border-white/10">
+<h4 class="text-xs font-bold text-white/40 uppercase mb-4">Historical Accuracy</h4>
+<div class="flex items-end gap-1 h-12">
+<div class="w-full bg-white/20 h-1/2 rounded-t-sm"></div>
+<div class="w-full bg-white/20 h-3/4 rounded-t-sm"></div>
+<div class="w-full bg-white/20 h-2/3 rounded-t-sm"></div>
+<div class="w-full bg-white/40 h-full rounded-t-sm"></div>
+<div class="w-full bg-white/20 h-4/5 rounded-t-sm"></div>
+<div class="w-full bg-white/60 h-full rounded-t-sm"></div>
+<div class="w-full bg-accent h-[95%] rounded-t-sm"></div>
+</div>
+<p class="text-[10px] text-center mt-2 text-white/40">Audit readiness score: 98.4%</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Recent Documents Table -->
+<section class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<h2 class="text-lg font-bold">Recent Uploads</h2>
+<button class="text-sm font-bold text-primary hover:text-accent transition-colors">View All Documents</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 text-xs font-bold uppercase tracking-wider">
+<th class="px-6 py-3">Document Name</th>
+<th class="px-6 py-3">Type</th>
+<th class="px-6 py-3">Upload Date</th>
+<th class="px-6 py-3">Status</th>
+<th class="px-6 py-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-sm">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<td class="px-6 py-4 font-medium flex items-center gap-3">
+<span class="material-symbols-outlined text-red-500">picture_as_pdf</span>
+                                    Quarterly_Tax_Report_Q2.pdf
+                                </td>
+<td class="px-6 py-4 text-slate-500">PDF Document</td>
+<td class="px-6 py-4 text-slate-500">Oct 24, 2023</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold">Processed</span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">visibility</button>
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">download</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<td class="px-6 py-4 font-medium flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500">image</span>
+                                    Office_Supplies_Invoice_772.jpg
+                                </td>
+<td class="px-6 py-4 text-slate-500">Image</td>
+<td class="px-6 py-4 text-slate-500">Oct 23, 2023</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full bg-amber-100 text-amber-700 text-[10px] font-bold">In Review</span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">visibility</button>
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">download</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>
