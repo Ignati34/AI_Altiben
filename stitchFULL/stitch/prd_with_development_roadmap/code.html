@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PRD: Altiben S.L. Digital Transformation</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            altiben: {
+              red: '#e30613',
+              black: '#1a1a1a',
+              gray: '#f4f4f4'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="document-layout">
+    body {
+      background-color: #f9fafb;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    .prd-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      padding: 4rem;
+    }
+    @media (max-width: 768px) {
+      .prd-container {
+        padding: 1.5rem;
+        margin: 1rem;
+      }
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+    .section-border {
+      border-bottom: 2px solid #e30613;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+  </style>
+<style data-purpose="typography-and-tables">
+    .table-header {
+      background-color: #f4f4f4;
+      font-weight: 600;
+      text-align: left;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 12px;
+      font-size: 0.875rem;
+    }
+    .requirement-id {
+      font-family: monospace;
+      color: #e30613;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="font-sans">
+<!-- BEGIN: Action Bar -->
+<div class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 px-4 py-2 flex justify-between items-center shadow-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-altiben-red flex items-center justify-center rounded">
+<span class="text-white font-bold text-xs">A</span>
+</div>
+<span class="font-semibold text-sm hidden sm:inline">Altiben S.L. Documentation Portal</span>
+</div>
+<button class="bg-altiben-red hover:bg-red-700 text-white px-4 py-2 rounded text-sm font-medium flex items-center gap-2 transition-colors" data-purpose="download-button">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      Download PDF
+    </button>
+</div>
+<!-- END: Action Bar -->
+<main class="pt-16 pb-20">
+<div class="prd-container">
+<!-- BEGIN: Document Header -->
+<header class="mb-12 border-b-4 border-altiben-black pb-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div>
+<p class="text-altiben-red font-bold tracking-widest uppercase text-xs mb-2">Product Requirements Document</p>
+<h1 class="text-4xl md:text-5xl mb-2">Digital Presence &amp; Client Portal</h1>
+<p class="text-gray-500 italic">Version 1.0.0 | Last Updated: Oct 24, 2023</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-altiben-black">Project Code: ALT-2023-DX</p>
+<p class="text-sm">Status: <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-semibold">Approved</span></p>
+</div>
+</div>
+</header>
+<!-- END: Document Header -->
+<!-- BEGIN: Stakeholders Section -->
+<section class="mb-12" data-purpose="stakeholders-list" id="stakeholders">
+<h2 class="text-2xl section-border">Stakeholders</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 bg-gray-50 border-l-4 border-altiben-red">
+<h4 class="font-bold">Client</h4>
+<p>Altiben S.L.</p>
+<p class="text-sm text-gray-600">Tax Consultancy &amp; Professional Services</p>
+</div>
+<div class="p-4 bg-gray-50 border-l-4 border-altiben-black">
+<h4 class="font-bold">Development Team</h4>
+<p>Antigravity</p>
+<p class="text-sm text-gray-600">Full-stack Engineering &amp; AI Integration</p>
+</div>
+</div>
+</section>
+<!-- END: Stakeholders Section -->
+<!-- BEGIN: Executive Summary -->
+<section class="mb-12" id="executive-summary">
+<h2 class="text-2xl section-border">1. Executive Summary</h2>
+<p class="mb-4">
+          Altiben S.L. seeks to transition from traditional tax consultancy workflows to a digital-first ecosystem. This project involves the creation of a modern digital presence integrated with an intelligent client portal.
+        </p>
+<div class="bg-altiben-gray p-6 rounded-lg border border-gray-200">
+<p class="font-medium text-lg text-altiben-red mb-2">Core Vision</p>
+<p class="italic text-gray-700">
+            "Modernizing tax consultancy through the seamless integration of Artificial Intelligence and OCR technology, providing 24/7 client support and automated document handling while maintaining the highest security and accessibility standards."
+          </p>
+</div>
+</section>
+<!-- END: Executive Summary -->
+<!-- BEGIN: User Personas -->
+<section class="mb-12" id="user-personas">
+<h2 class="text-2xl section-border">2. User Personas</h2>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 bg-altiben-black text-white rounded-full flex items-center justify-center shrink-0">
+<span class="font-bold">C</span>
+</div>
+<div>
+<h3 class="text-xl font-semibold">Clients (End Users)</h3>
+<p class="text-gray-600">Small business owners, freelancers, and private individuals. They require a frictionless way to submit documents, track tax obligations, and get instant answers to common fiscal queries.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 bg-altiben-red text-white rounded-full flex items-center justify-center shrink-0">
+<span class="font-bold">A</span>
+</div>
+<div>
+<h3 class="text-xl font-semibold">Administrators (Staff)</h3>
+<p class="text-gray-600">Tax advisors and administrative staff. They need a dashboard to manage document queues, review OCR-extracted data, and monitor AI-human handoffs for complex queries.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: User Personas -->
+<!-- BEGIN: Functional Requirements -->
+<section class="mb-12" id="functional-requirements">
+<h2 class="text-2xl section-border">3. Functional Requirements</h2>
+<div class="space-y-6">
+<div class="group">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="requirement-id">FR-01</span> Multilingual Engine
+            </h3>
+<p class="pl-16 text-gray-700">The platform must support 17+ languages. Localization must include <strong>Catalan</strong>, Spanish, English, French, and German as priority tiers. Automatic browser detection and manual toggle required.</p>
+</div>
+<div class="group">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="requirement-id">FR-02</span> AI Assistant &amp; Voice
+            </h3>
+<p class="pl-16 text-gray-700">24/7 AI-powered chatbot with voice-to-text capabilities. It must be trained on Spanish/Catalan tax laws and provide real-time guidance on standard procedures.</p>
+</div>
+<div class="group">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="requirement-id">FR-03</span> OCR Document Processing
+            </h3>
+<p class="pl-16 text-gray-700">Intelligent Document Processing (IDP) using OCR for receipts, invoices, and bank statements. System must extract VAT, total amount, provider ID, and date with &gt;95% accuracy.</p>
+</div>
+<div class="group">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="requirement-id">FR-04</span> Payment Integration
+            </h3>
+<p class="pl-16 text-gray-700">Subscription-based billing models. Integration with Stripe for credit card payments and SEPA mandates for recurring monthly fees.</p>
+</div>
+</div>
+</section>
+<!-- END: Functional Requirements -->
+<!-- BEGIN: Technical Requirements -->
+<section class="mb-12" id="technical-requirements">
+<h2 class="text-2xl section-border">4. Technical Requirements</h2>
+<h3 class="text-lg font-bold mt-6 mb-4">Database Schema (Partial)</h3>
+<table>
+<thead class="table-header">
+<tr>
+<th>Table Name</th>
+<th>Primary Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>users</code></td>
+<td><code>user_id (UUID)</code></td>
+<td>Core user identity and authentication data.</td>
+</tr>
+<tr>
+<td><code>documents</code></td>
+<td><code>doc_id (UUID)</code></td>
+<td>Stores metadata and OCR extraction results for uploads.</td>
+</tr>
+<tr>
+<td><code>subscriptions</code></td>
+<td><code>sub_id (UUID)</code></td>
+<td>Active billing cycles and tier access levels.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="text-lg font-bold mb-4">API Architecture</h3>
+<ul class="list-disc pl-5 space-y-2 text-gray-700">
+<li><strong>Chatbot API:</strong> RESTful endpoints for message submission and response streaming.</li>
+<li><strong>Authentication:</strong> OAuth 2.0 and JWT (JSON Web Tokens) for secure session management.</li>
+<li><strong>Compliance:</strong> WCAG 2.1 Level AA Accessibility Compliance for all web interfaces.</li>
+</ul>
+</section>
+<!-- END: Technical Requirements -->
+<!-- BEGIN: Design System -->
+<section class="mb-12" id="design-system">
+<h2 class="text-2xl section-border">5. Design System</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+<div class="flex flex-col gap-2">
+<div class="h-16 w-full bg-altiben-red rounded shadow-inner"></div>
+<p class="text-xs font-bold uppercase">Primary Red</p>
+<p class="text-xs text-gray-500">HEX: #e30613</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-16 w-full bg-altiben-black rounded shadow-inner"></div>
+<p class="text-xs font-bold uppercase">Corporate Black</p>
+<p class="text-xs text-gray-500">HEX: #1a1a1a</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-16 w-full bg-white border border-gray-200 rounded shadow-inner"></div>
+<p class="text-xs font-bold uppercase">Pure White</p>
+<p class="text-xs text-gray-500">HEX: #ffffff</p>
+</div>
+</div>
+<p class="text-gray-700">
+<strong>Typography:</strong> The primary typeface is <strong>Inter</strong>. It is selected for its high readability on digital screens and professional aesthetic. 
+        </p>
+</section>
+<!-- END: Design System -->
+<!-- BEGIN: Acceptance Criteria -->
+<section class="mb-12" id="acceptance-criteria">
+<h2 class="text-2xl section-border">6. Acceptance Criteria</h2>
+<div class="bg-gray-50 p-6 rounded-lg border-2 border-dashed border-gray-300">
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<input checked="" class="mt-1 text-altiben-red focus:ring-altiben-red" disabled="" type="checkbox"/>
+<span>System handles OCR for a 100-page PDF batch in under 60 seconds.</span>
+</li>
+<li class="flex items-start gap-3">
+<input checked="" class="mt-1 text-altiben-red focus:ring-altiben-red" disabled="" type="checkbox"/>
+<span>Chatbot accurately detects Catalan vs Spanish within the first two exchanges.</span>
+</li>
+<li class="flex items-start gap-3">
+<input checked="" class="mt-1 text-altiben-red focus:ring-altiben-red" disabled="" type="checkbox"/>
+<span>All payment transactions meet PCI-DSS compliance standards.</span>
+</li>
+<li class="flex items-start gap-3">
+<input checked="" class="mt-1 text-altiben-red focus:ring-altiben-red" disabled="" type="checkbox"/>
+<span>Audit logs are maintained for all document modifications.</span>
+</li>
+</ul>
+</div>
+</section><section class="mb-12" id="development-roadmap">
+<h2 class="text-2xl section-border">7. Development Roadmap</h2>
+<div class="space-y-6">
+<div class="relative pl-8 border-l-2 border-altiben-red">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-altiben-red border-4 border-white"></div>
+<h4 class="font-bold text-lg">Phase 1: Foundation <span class="text-sm font-normal text-gray-500 ml-2">(Weeks 1-4)</span></h4>
+<p class="text-gray-700">UI Implementation, Auth Flow, Database setup.</p>
+</div>
+<div class="relative pl-8 border-l-2 border-altiben-red">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-altiben-red border-4 border-white"></div>
+<h4 class="font-bold text-lg">Phase 2: Core Features <span class="text-sm font-normal text-gray-500 ml-2">(Weeks 5-8)</span></h4>
+<p class="text-gray-700">Multilingual Engine, AI Assistant integration, Calendly link.</p>
+</div>
+<div class="relative pl-8 border-l-2 border-altiben-red">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-altiben-red border-4 border-white"></div>
+<h4 class="font-bold text-lg">Phase 3: Advanced Functionality <span class="text-sm font-normal text-gray-500 ml-2">(Weeks 9-12)</span></h4>
+<p class="text-gray-700">Client Portal, OCR Processing for documents &amp; receipts.</p>
+</div>
+<div class="relative pl-8 border-l-2 border-altiben-red">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-altiben-red border-4 border-white"></div>
+<h4 class="font-bold text-lg">Phase 4: QA &amp; Deployment <span class="text-sm font-normal text-gray-500 ml-2">(Weeks 13-16)</span></h4>
+<p class="text-gray-700">Security auditing, Performance optimization, Final launch.</p>
+</div>
+</div>
+</section>
+<!-- END: Acceptance Criteria -->
+<!-- BEGIN: Footer -->
+<footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between text-xs text-gray-400">
+<p>© 2023 Altiben S.L. &amp; Antigravity Partners. Confidential.</p>
+<div class="flex gap-4">
+<a class="hover:text-altiben-red" href="#">Privacy Policy</a>
+<a class="hover:text-altiben-red" href="#">Terms of Service</a>
+</div>
+</footer>
+<!-- END: Footer -->
+</div>
+</main>
+</body></html>

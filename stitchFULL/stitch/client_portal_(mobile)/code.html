@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Altiben S.L. Client Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#351a5b",
+                        "brand-red": "#e30613",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#18131f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Sticky Top Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                    A
+                </div>
+<div>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Altiben S.L.</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Financial Dashboard</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="relative p-2 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-brand-red rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<div class="size-10 rounded-full bg-primary/10 border-2 border-primary/20 overflow-hidden">
+<img alt="User Profile Avatar" data-alt="Professional male portrait for user profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwSOczakeFxhCsGA_rknrEnDLIn-sLjW3XOuq6fA3g02U6Oi4jSi6BERfhPUxEnHWbEHpOYpN4hYRHm99gx2PLiXWOvLjd0G5V1HJ0ltvm0OBmJzw9APMqj5QZRFf2OiggnqZTxKxBLq5frLzMVy16A898lt_1f9Re5993Zs-kFnV-sA5RKxr3pycUQBqiVBOdVsew1B2N0L_e6GjgXkGztFb6I1MTkf7xOBDKdRFLfDrsf6fnpGnjBkuhOsAh4WDKFVpBe4nh4bw"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-24">
+<!-- Summary Cards Carousel -->
+<section class="mt-6">
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-4 px-4 pb-4 no-scrollbar">
+<div class="flex-none w-72 snap-center bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-blue-600">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<span class="text-xs font-bold text-blue-600 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded">Action Required</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Pending Approval</p>
+<h3 class="text-2xl font-bold mt-1">4 Documents</h3>
+<p class="text-xs text-slate-400 mt-2">Latest: Invoice #2934</p>
+</div>
+<div class="flex-none w-72 snap-center bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-2 bg-green-50 dark:bg-green-900/20 rounded-lg text-green-600">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-xs font-bold text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded">Oct 2023</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Monthly Expenses</p>
+<h3 class="text-2xl font-bold mt-1">€2,450.00</h3>
+<p class="text-xs text-green-600 mt-2">↓ 12% vs last month</p>
+</div>
+<div class="flex-none w-72 snap-center bg-white dark:bg-slate-900 p-5 rounded-xl border-2 border-brand-red/30 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-2 bg-red-50 dark:bg-red-900/20 rounded-lg text-brand-red">
+<span class="material-symbols-outlined">event_busy</span>
+</div>
+<span class="text-xs font-bold text-brand-red bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded italic">Urgent</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Tax Deadline</p>
+<h3 class="text-2xl font-bold mt-1">Oct 20, 2023</h3>
+<p class="text-xs text-brand-red mt-2 font-semibold">Due in 3 days</p>
+</div>
+</div>
+</section>
+<!-- Receipt Scanner Widget -->
+<section class="mt-4 px-4">
+<div class="bg-primary rounded-xl p-5 text-white shadow-lg overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10"></div>
+<div class="relative z-10">
+<h2 class="text-lg font-bold mb-1">Receipt Scanner</h2>
+<p class="text-primary/70 dark:text-white/70 text-sm mb-4">Upload or scan paper receipts instantly.</p>
+<button class="w-full bg-white text-primary font-bold py-3 rounded-lg flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">photo_camera</span>
+                        Scan Receipt
+                    </button>
+<div class="mt-6">
+<p class="text-xs font-semibold uppercase tracking-wider text-white/60 mb-3">Recent Scans</p>
+<div class="flex gap-3 overflow-x-auto no-scrollbar">
+<div class="relative flex-none size-16 rounded-lg bg-white/10 overflow-hidden border border-white/20">
+<img alt="Recent Scan Receipt" class="opacity-50 object-cover w-full h-full" data-alt="Close up image of a paper receipt with text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtCUZx3aKPX_OVlJu3Hjxvf1-CJkGoYnqinjy4yHp_WVyd7k4uuhmYoMcGZb7gRyAYTSyTjMy_GSlHMiuRN2CJRwbroG-lE5swgkK4jX2V-X9unwgUYNskXlGysUiVHOafJbLiMq5-tcc1Wqd-TK6uj09nF-bG_r_eh-Cslcauj6cp7Ppros7oEPtnCiq61EmENyECGMvd4Y3GK2CD_j4NxoTz0yjzhkrY5GE8nS_jY5j7UYIpUC2ec9xUu9upVgmtxhoyfGU5cLQ"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">check_circle</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-green-500 h-1"></div>
+</div>
+<div class="relative flex-none size-16 rounded-lg bg-white/10 overflow-hidden border border-white/20">
+<img alt="Extracting Receipt" class="opacity-50 object-cover w-full h-full" data-alt="Document showing financial figures being processed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABGQ7MdDsTsVSM4pVHRdZpvxr4N8WTiYZsIgjnwJU633nbMqJTCwduvafv4Urvj8FlJAW_JxCZbJof7kIn3l9bc1018zCG-0hhK240OXbOZmiVm3odZ2jisW_0UigjHCY-VFUwDhEu8WasyJDV8sljqHaO8fUavneE1tw87v8ItzFvophHcyyJT6zOmnxkMoqUAsMfWYrB5EQQKnJNNy0NnnKB227mwXZwwgI6Y7pzPVQVJ1ur3ZkjjB0kKZmelbxHMRYuMLbWkag"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40">
+<span class="material-symbols-outlined text-white text-sm animate-pulse">sync</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-amber-500 h-1 w-1/2"></div>
+</div>
+<div class="flex-none size-16 rounded-lg bg-white/10 border-2 border-dashed border-white/30 flex items-center justify-center text-white/50">
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Document Center -->
+<section class="mt-8 px-4">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                Document Center
+                <span class="material-symbols-outlined text-slate-400 text-sm">info</span>
+</h3>
+<div class="flex flex-col items-center gap-4 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900/50 px-6 py-10 transition-colors hover:border-primary/50">
+<div class="p-4 bg-primary/5 rounded-full text-primary">
+<span class="material-symbols-outlined text-4xl">cloud_upload</span>
+</div>
+<div class="text-center">
+<p class="text-slate-900 dark:text-slate-100 font-bold">Tap to upload files</p>
+<p class="text-slate-500 text-sm mt-1">PDF, JPG, PNG up to 20MB</p>
+</div>
+<button class="mt-2 min-w-[140px] px-6 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg font-bold text-sm tracking-wide shadow-sm hover:bg-slate-200">
+                    Browse Files
+                </button>
+</div>
+</section>
+<!-- AI Insights -->
+<section class="mt-8 px-4">
+<h3 class="text-lg font-bold mb-4">AI Insights</h3>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-end mb-2">
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest">VAT Exposure</p>
+<h4 class="text-xl font-bold">€1,120.45</h4>
+</div>
+<span class="text-xs font-bold text-brand-red">High Risk</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-brand-red h-full rounded-full" style="width: 78%"></div>
+</div>
+<p class="text-[10px] text-slate-500 mt-2 uppercase font-medium">78% of quarterly limit reached</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-end mb-2">
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Profit / Loss</p>
+<h4 class="text-xl font-bold">+ €8,940.00</h4>
+</div>
+<span class="text-xs font-bold text-green-600">On Track</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 62%"></div>
+</div>
+<p class="text-[10px] text-slate-500 mt-2 uppercase font-medium">Target: €14,500.00 (62%)</p>
+</div>
+</div>
+</section>
+<!-- Recent Uploads -->
+<section class="mt-8 px-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Recent Uploads</h3>
+<button class="text-primary text-sm font-bold">View All</button>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="size-10 bg-red-100 dark:bg-red-900/30 text-brand-red rounded flex items-center justify-center">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate">Oct_Rent_Invoice.pdf</p>
+<p class="text-xs text-slate-400">Today, 10:45 AM • 1.2 MB</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">more_vert</span>
+</div>
+<div class="flex items-center gap-3 bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="size-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded flex items-center justify-center">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate">Supplier_Note_342.jpg</p>
+<p class="text-xs text-slate-400">Yesterday, 4:20 PM • 3.5 MB</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">more_vert</span>
+</div>
+<div class="flex items-center gap-3 bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="size-10 bg-primary/10 text-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined">article</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate">Company_Tax_Form_2023.pdf</p>
+<p class="text-xs text-slate-400">Oct 12, 2023 • 840 KB</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">more_vert</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-3 z-50">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">folder</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Files</span>
+</a>
+<div class="relative -mt-10">
+<button class="size-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Insights</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Settings</span>
+</a>
+</div>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Overview: Altiben S.L. Digital Transformation</title>
+<!-- Tailwind CSS CDN with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            altiben: {
+              red: '#e30613',
+              dark: '#1a1a1a',
+              light: '#f9fafb',
+              gray: '#6b7280'
+            }
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layouts">
+    body {
+      background-color: #f3f4f6;
+      color: #1a1a1a;
+    }
+    .swatch-shadow {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .card-border {
+      border: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+<body class="antialiased font-sans">
+<!-- BEGIN: Sidebar Navigation -->
+<aside class="fixed inset-y-0 left-0 w-64 bg-altiben-dark text-white hidden lg:flex flex-col z-50">
+<div class="p-6">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 bg-altiben-red rounded-custom flex items-center justify-center font-bold text-sm">A</div>
+<span class="font-bold text-lg tracking-tight">ALTIBEN S.L.</span>
+</div>
+</div>
+<nav class="flex-1 px-4 py-4 space-y-2">
+<a class="block px-4 py-2 rounded-custom bg-altiben-red text-white" href="#summary">Project Summary</a>
+<a class="block px-4 py-2 rounded-custom hover:bg-white/10 transition-colors" href="#design-system">Design System</a>
+<a class="block px-4 py-2 rounded-custom hover:bg-white/10 transition-colors" href="#sitemap">Screen Index</a>
+<a class="block px-4 py-2 rounded-custom hover:bg-white/10 transition-colors" href="#technical">Technical Implementation</a><a class="block px-4 py-2 rounded-custom hover:bg-white/10 transition-colors" href="#auth-flow">Auth Flow</a><a class="block px-4 py-2 rounded-custom hover:bg-white/10 transition-colors" href="#database-schema">Database Schema</a>
+<a class="block px-4 py-2 rounded-custom hover:bg-white/10 transition-colors" href="#user-roles">User Roles</a><a class="block px-4 py-2 rounded-custom hover:bg-white/10 transition-colors" href="#handover">Handover Notes</a>
+</nav>
+<div class="p-6 border-t border-white/10 text-xs text-gray-400">
+      v1.0.4 Build (Final Review)
+    </div>
+</aside>
+<!-- END: Sidebar Navigation -->
+<!-- BEGIN: Main Content Area -->
+<main class="lg:ml-64 p-4 md:p-8 lg:p-12">
+<!-- BEGIN: MainHeader -->
+<header class="mb-12" data-purpose="header-section" id="summary">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="text-altiben-red font-semibold tracking-widest uppercase text-xs">Internal Documentation</span>
+<h1 class="text-3xl md:text-4xl font-extrabold mt-2">Project: Altiben S.L. - Digital Transformation</h1>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium border border-green-200">Status: In Development</span>
+</div>
+</div>
+<div class="mt-8 bg-white p-6 rounded-custom shadow-sm card-border">
+<h2 class="text-lg font-bold mb-3 flex items-center">
+<svg class="w-5 h-5 mr-2 text-altiben-red" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Project Summary
+        </h2>
+<p class="text-altiben-gray leading-relaxed">
+          The goal of this initiative is to modernize Altiben S.L.'s digital presence, transforming the legacy tax consultancy portal into a high-performance, multilingual hub. The new UI/UX focuses on professional clarity, accessibility for international clients, and the integration of AI-driven support tools to automate preliminary tax inquiries.
+        </p>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: DesignSystem -->
+<section class="mb-12" data-purpose="design-system-specs" id="design-system">
+<h2 class="text-2xl font-bold mb-6">Design System</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Color Swatches -->
+<div class="bg-white p-6 rounded-custom shadow-sm card-border">
+<h3 class="font-bold mb-4 text-sm text-gray-500 uppercase tracking-wider">Brand Palette</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-custom bg-[#e30613] swatch-shadow"></div>
+<div>
+<p class="font-bold">Primary Red</p>
+<code class="text-xs text-altiben-red">#E30613</code>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-custom bg-[#1a1a1a] swatch-shadow"></div>
+<div>
+<p class="font-bold">Dark Neutral</p>
+<code class="text-xs text-altiben-gray">#1A1A1A</code>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-custom bg-white border swatch-shadow"></div>
+<div>
+<p class="font-bold">Pure White</p>
+<code class="text-xs text-altiben-gray">#FFFFFF</code>
+</div>
+</div>
+</div>
+</div>
+<!-- Typography -->
+<div class="bg-white p-6 rounded-custom shadow-sm card-border">
+<h3 class="font-bold mb-4 text-sm text-gray-500 uppercase tracking-wider">Typography</h3>
+<div class="space-y-4">
+<div>
+<p class="text-xs text-altiben-gray mb-1">Primary Font Family</p>
+<p class="text-3xl font-sans font-bold italic tracking-tight text-altiben-dark">Inter</p>
+</div>
+<div class="pt-4 border-t border-gray-100">
+<p class="text-xs text-altiben-gray mb-2">Usage Guide</p>
+<ul class="text-sm space-y-1">
+<li class="flex items-center"><span class="w-2 h-2 bg-altiben-red rounded-full mr-2"></span> Headlines: 700 Bold / -0.02em tracking</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-altiben-red rounded-full mr-2"></span> Body: 400 Regular / 1.5 leading</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-altiben-red rounded-full mr-2"></span> UI Labels: 600 Semibold / Uppercase</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DesignSystem -->
+<!-- BEGIN: ScreenIndex -->
+<section class="mb-12" data-purpose="screen-index-navigation" id="sitemap">
+<h2 class="text-2xl font-bold mb-6">Interactive Sitemap / Screen Index</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Home Screen -->
+<div class="bg-white p-4 rounded-custom card-border group cursor-pointer hover:shadow-md transition-shadow">
+<div class="aspect-video bg-gray-100 rounded-md mb-3 flex items-center justify-center overflow-hidden">
+<span class="text-xs text-gray-400">Home RU/EN</span>
+</div>
+<p class="text-sm font-bold truncate">Landing Page</p>
+<p class="text-[10px] text-gray-400">Core Conversion</p>
+</div>
+<!-- Services -->
+<div class="bg-white p-4 rounded-custom card-border group cursor-pointer hover:shadow-md transition-shadow">
+<div class="aspect-video bg-gray-100 rounded-md mb-3 flex items-center justify-center overflow-hidden">
+<span class="text-xs text-gray-400">Services Index</span>
+</div>
+<p class="text-sm font-bold truncate">Tax Services</p>
+<p class="text-[10px] text-gray-400">Details &amp; Pricing</p>
+</div>
+<!-- Contact -->
+<div class="bg-white p-4 rounded-custom card-border group cursor-pointer hover:shadow-md transition-shadow">
+<div class="aspect-video bg-gray-100 rounded-md mb-3 flex items-center justify-center overflow-hidden">
+<span class="text-xs text-gray-400">Contact Flow</span>
+</div>
+<p class="text-sm font-bold truncate">Contact Page</p>
+<p class="text-[10px] text-gray-400">Direct Forms</p>
+</div>
+<!-- Widget Preview -->
+<div class="bg-white p-4 rounded-custom border-2 border-altiben-red group cursor-pointer hover:shadow-md transition-shadow">
+<div class="aspect-video rounded-md mb-3 overflow-hidden bg-white flex items-center justify-center relative">
+<img alt="AI Assistant Widget" class="max-h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1YDIVraFxCTPIkScfPFgWvjiTRVKUVQKZC0cljR88gJ1Y90r8abWgcucpF7HSIMAXrbKWMsJnD1z7RUbjT172uEzkYVvkyVoIsxcRQ_Zx-LiCfIbf5wycp2L5irxSd7NzbZfoyCubZ7g0d5bsL_72IHgaK27mXVKl9YEnf5V9bPLqjcDyjDj31n4z_XqMTtedk4A_8SHvtFNIhoUXVOKphLVYC0IBUVGOBb0_NniEjwKOsgi9TIdT1AYs1pSbxa4liWcpHMMIqjY"/>
+</div>
+<p class="text-sm font-bold truncate text-altiben-red">AI Assistant UI</p>
+<p class="text-[10px] text-gray-400">Widget Overlay</p>
+</div>
+</div>
+</section>
+<!-- END: ScreenIndex -->
+<!-- BEGIN: TechnicalImplementation -->
+<section class="mb-12" data-purpose="technical-requirements" id="technical">
+<h2 class="text-2xl font-bold mb-6">Technical Implementation Details</h2>
+<div class="space-y-6">
+<!-- AI Assistant Logic -->
+<div class="bg-white p-6 rounded-custom shadow-sm card-border relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-altiben-red/5 rounded-full"></div>
+<div class="flex items-start gap-4">
+<div class="bg-altiben-red/10 p-3 rounded-custom">
+<svg class="w-6 h-6 text-altiben-red" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-lg mb-2">AI Assistant Widget Logic</h3>
+<p class="text-altiben-gray text-sm leading-relaxed mb-4">
+                The global header contains a <span class="font-semibold text-altiben-dark">"Altiben Assistant 24/7"</span> button. This button functions as a global state toggle for the floating widget.
+              </p>
+<ul class="text-xs space-y-2 text-altiben-gray">
+<li class="flex gap-2">
+<span class="text-altiben-red font-bold">01.</span>
+<span><strong>Widget Reference:</strong> Use <code>{{DATA:IMAGE:IMAGE_4}}</code> for structural reference (Inputs for Name, Email, and Voice toggle).</span>
+</li>
+<li class="flex gap-2">
+<span class="text-altiben-red font-bold">02.</span>
+<span><strong>Voice-to-Text:</strong> Integrate Web Speech API (or Whisper API) for the microphone icon functionality.</span>
+</li>
+<li class="flex gap-2">
+<span class="text-altiben-red font-bold">03.</span>
+<span><strong>State:</strong> Maintain chat history in local storage for the duration of the session.</span>
+</li>
+</ul>
+</div>
+</div>
+</div><!-- Chatbot API Documentation -->
+<div class="bg-white p-6 rounded-custom shadow-sm card-border relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-altiben-red/5 rounded-full"></div>
+<div class="flex items-start gap-4">
+<div class="bg-altiben-red/10 p-3 rounded-custom">
+<svg class="w-6 h-6 text-altiben-red" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-lg mb-4">Chatbot API Documentation</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-4">
+<div>
+<p class="text-xs font-bold text-altiben-red uppercase mb-1 tracking-wider">Endpoint</p>
+<code class="bg-gray-100 px-2 py-1 rounded text-xs font-mono">POST /api/v1/chat/message</code>
+</div>
+<div>
+<p class="text-xs font-bold text-altiben-red uppercase mb-1 tracking-wider">Request Body (JSON)</p>
+<pre class="bg-gray-900 text-gray-300 p-3 rounded text-[10px] font-mono leading-relaxed">{
+  "session_id": "uuid-string",
+  "message": "string",
+  "language_code": "string"
+}</pre>
+</div>
+<div>
+<p class="text-xs font-bold text-altiben-red uppercase mb-1 tracking-wider">Voice Integration</p>
+<p class="text-xs text-altiben-gray leading-relaxed">Microphone trigger should invoke <strong>Whisper API</strong> (or similar speech-to-text service) to process audio before sending text payload to the endpoint.</p>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<p class="text-xs font-bold text-altiben-red uppercase mb-1 tracking-wider">Response Format</p>
+<pre class="bg-gray-900 text-gray-300 p-3 rounded text-[10px] font-mono leading-relaxed">{
+  "response_text": "string",
+  "suggested_actions": [],
+  "timestamp": "ISO-8601"
+}</pre>
+</div>
+<div>
+<p class="text-xs font-bold text-altiben-red uppercase mb-1 tracking-wider">Real-time Updates</p>
+<p class="text-xs text-altiben-gray leading-relaxed">Implement <strong>WebSockets</strong> or <strong>Server-Sent Events (SSE)</strong> for streaming bot responses to ensure a low-latency, responsive user interface.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Multilingual Support -->
+<div class="bg-white p-6 rounded-custom shadow-sm card-border">
+<h3 class="font-bold mb-3 flex items-center text-sm">
+<svg class="w-4 h-4 mr-2 text-altiben-red" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Multilingual Support
+            </h3>
+<p class="text-xs text-altiben-gray leading-relaxed">
+              Header dropdown must support <strong>16+ languages</strong>. All static UI strings should be served via JSON dictionary files. Implement RTL (Right-to-Left) support for Arabic/Hebrew variants as specified in the roadmap.
+            </p>
+</div>
+<!-- Form Integration -->
+<div class="bg-white p-6 rounded-custom shadow-sm card-border">
+<h3 class="font-bold mb-3 flex items-center text-sm">
+<svg class="w-4 h-4 mr-2 text-altiben-red" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Calendly Integration
+            </h3>
+<p class="text-xs text-altiben-gray leading-relaxed">
+              'Book a Consultation' buttons and 'Contact' page forms must trigger the <strong>Calendly Popup Widget</strong>. Ensure tracking parameters are passed to verify leads from specific landing sections.
+            </p>
+</div>
+</div>
+</div>
+</section><section class="mb-12" data-purpose="auth-flow-specs" id="auth-flow">
+<h2 class="text-2xl font-bold mb-6">Authentication Flow</h2>
+<div class="bg-white p-6 rounded-custom shadow-sm card-border relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-altiben-red/5 rounded-full"></div>
+<div class="flex items-start gap-4">
+<div class="bg-altiben-red/10 p-3 rounded-custom">
+<svg class="w-6 h-6 text-altiben-red" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-lg mb-4">Security &amp; Identity Lifecycle</h3>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="flex items-center justify-center w-6 h-6 bg-altiben-red text-white rounded-full text-xs font-bold">1</span>
+<h4 class="font-bold text-sm">Identity Selection</h4>
+</div>
+<p class="text-xs text-altiben-gray leading-relaxed">
+                    User selects login method via <strong>OAuth 2.0 (Social)</strong> or <strong>Email/Password</strong>. Multi-factor authentication is triggered for administrative roles.
+                  </p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="flex items-center justify-center w-6 h-6 bg-altiben-red text-white rounded-full text-xs font-bold">2</span>
+<h4 class="font-bold text-sm">Token Generation</h4>
+</div>
+<p class="text-xs text-altiben-gray leading-relaxed">
+                    Upon successful validation, the backend issues a <strong>JWT (JSON Web Token)</strong> signed with HS256, containing user scope and expiration metadata.
+                  </p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="flex items-center justify-center w-6 h-6 bg-altiben-red text-white rounded-full text-xs font-bold">3</span>
+<h4 class="font-bold text-sm">Secure Storage</h4>
+</div>
+<p class="text-xs text-altiben-gray leading-relaxed">
+                    Session data is stored in <strong>HttpOnly, Secure cookies</strong> or encrypted local storage to prevent XSS/CSRF attacks during the active session.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TechnicalImplementation -->
+<!-- BEGIN: HandoverNote -->
+<section class="mb-12" data-purpose="database-schema-specs" id="database-schema">
+<h2 class="text-2xl font-bold mb-6">Database Schema for Tax Applications</h2>
+<div class="bg-white p-6 rounded-custom shadow-sm card-border overflow-hidden">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-sm text-gray-500 uppercase tracking-wider">Table: tax_consulting_requests</h3>
+<span class="px-2 py-0.5 bg-altiben-dark text-white text-[10px] rounded font-mono">PostgreSQL / MySQL</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50 border-b border-gray-200">
+<th class="px-4 py-3 text-xs font-bold text-altiben-dark uppercase tracking-wider">Field Name</th>
+<th class="px-4 py-3 text-xs font-bold text-altiben-dark uppercase tracking-wider">Type</th>
+<th class="px-4 py-3 text-xs font-bold text-altiben-dark uppercase tracking-wider">Constraints</th>
+<th class="px-4 py-3 text-xs font-bold text-altiben-dark uppercase tracking-wider">Description</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100">
+<tr>
+<td class="px-4 py-3 font-mono text-xs text-altiben-red font-bold">application_id</td>
+<td class="px-4 py-3 text-xs">UUID / INT</td>
+<td class="px-4 py-3 text-xs font-semibold text-gray-600">PRIMARY KEY</td>
+<td class="px-4 py-3 text-xs text-altiben-gray">Unique identifier for the request</td>
+</tr>
+<tr>
+<td class="px-4 py-3 font-mono text-xs">client_name</td>
+<td class="px-4 py-3 text-xs">VARCHAR(255)</td>
+<td class="px-4 py-3 text-xs">NOT NULL</td>
+<td class="px-4 py-3 text-xs text-altiben-gray">Full name of the client</td>
+</tr>
+<tr>
+<td class="px-4 py-3 font-mono text-xs">email</td>
+<td class="px-4 py-3 text-xs">VARCHAR(255)</td>
+<td class="px-4 py-3 text-xs">NOT NULL</td>
+<td class="px-4 py-3 text-xs text-altiben-gray">Contact email address</td>
+</tr>
+<tr>
+<td class="px-4 py-3 font-mono text-xs">service_type</td>
+<td class="px-4 py-3 text-xs">ENUM</td>
+<td class="px-4 py-3 text-xs">-</td>
+<td class="px-4 py-3 text-xs text-altiben-gray">Accounting, Tax Returns, Financial Planning</td>
+</tr>
+<tr>
+<td class="px-4 py-3 font-mono text-xs">message_query</td>
+<td class="px-4 py-3 text-xs">TEXT</td>
+<td class="px-4 py-3 text-xs">-</td>
+<td class="px-4 py-3 text-xs text-altiben-gray">Detailed inquiry text from client</td>
+</tr>
+<tr>
+<td class="px-4 py-3 font-mono text-xs">status</td>
+<td class="px-4 py-3 text-xs">VARCHAR(50)</td>
+<td class="px-4 py-3 text-xs">DEFAULT 'New'</td>
+<td class="px-4 py-3 text-xs text-altiben-gray">New, In Progress, Completed</td>
+</tr>
+<tr>
+<td class="px-4 py-3 font-mono text-xs">created_at</td>
+<td class="px-4 py-3 text-xs">TIMESTAMP</td>
+<td class="px-4 py-3 text-xs">DEFAULT NOW()</td>
+<td class="px-4 py-3 text-xs text-altiben-gray">Auto-generated request timestamp</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-100 flex gap-4">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-altiben-red"></div>
+<span class="text-[10px] text-gray-500 font-bold uppercase">Relational Integrity Required</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-altiben-dark"></div>
+<span class="text-[10px] text-gray-500 font-bold uppercase">Encrypted at Rest</span>
+</div>
+</div>
+</div>
+</section><section class="mb-12" data-purpose="access-control-specs" id="user-roles">
+<h2 class="text-2xl font-bold mb-6">User Roles &amp; Access Control</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Client Role -->
+<div class="bg-white p-6 rounded-custom shadow-sm card-border">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-altiben-red/10 rounded-custom">
+<svg class="w-5 h-5 text-altiben-red" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-bold text-lg">Client (End User)</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-red rounded-full mt-1.5 mr-3 shrink-0"></span>
+          Access Public Content
+        </li>
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-red rounded-full mt-1.5 mr-3 shrink-0"></span>
+          Interact with AI Assistant
+        </li>
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-red rounded-full mt-1.5 mr-3 shrink-0"></span>
+          Submit Tax Inquiries
+        </li>
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-red rounded-full mt-1.5 mr-3 shrink-0"></span>
+          Schedule Consultations via Calendly
+        </li>
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-red rounded-full mt-1.5 mr-3 shrink-0"></span>
+          View Personal Request History
+        </li>
+</ul>
+</div>
+<!-- Administrator Role -->
+<div class="bg-white p-6 rounded-custom shadow-sm card-border">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-altiben-dark/10 rounded-custom">
+<svg class="w-5 h-5 text-altiben-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-bold text-lg">Administrator (Staff)</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-dark rounded-full mt-1.5 mr-3 shrink-0"></span>
+          Manage Tax Requests
+        </li>
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-dark rounded-full mt-1.5 mr-3 shrink-0"></span>
+          Review AI Chat Logs
+        </li>
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-dark rounded-full mt-1.5 mr-3 shrink-0"></span>
+          Update Service Content
+        </li>
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-dark rounded-full mt-1.5 mr-3 shrink-0"></span>
+          Export Data for Reporting
+        </li>
+<li class="flex items-start text-sm text-altiben-gray">
+<span class="w-1.5 h-1.5 bg-altiben-dark rounded-full mt-1.5 mr-3 shrink-0"></span>
+          System Configuration
+        </li>
+</ul>
+</div>
+</div>
+</section><section class="mb-12" data-purpose="footer-notes" id="handover">
+<div class="bg-altiben-dark text-white p-8 rounded-custom">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div>
+<h2 class="text-xl font-bold mb-2">Handover Note</h2>
+<p class="text-gray-400 text-sm max-w-md">Prepared by Antigravity Development Team. This documentation is for internal engineering review only.</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-1">Developer Contact</p>
+<p class="text-altiben-red font-medium">dev-support@antigravity.altiben.com</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HandoverNote -->
+<!-- BEGIN: FooterCopyright -->
+<footer class="text-center text-gray-400 text-[10px] pb-8">
+      © 2024 Altiben S.L. - All Rights Reserved. Proprietary Digital Transformation Framework.
+    </footer>
+<!-- END: FooterCopyright -->
+</main>
+<!-- END: Main Content Area -->
+<script data-purpose="navigation-logic">
+    // Simple smooth scroll logic
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        
+        // Update active state
+        document.querySelectorAll('aside nav a').forEach(a => a.classList.remove('bg-altiben-red', 'text-white'));
+        this.classList.add('bg-altiben-red', 'text-white');
+      });
+    });
+  </script>
+</body></html>
