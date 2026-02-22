@@ -61,17 +61,17 @@
 <!-- Main Nav -->
 <nav class="hidden md:flex items-center gap-10">
 <a class="text-sm font-semibold dark:text-slate-100 hover:text-primary transition-colors text-black text-zinc-600" href="#">Home</a>
-<a class="text-sm font-semibold dark:text-slate-400 hover:text-primary transition-colors text-black text-zinc-600" href="#services">Services</a>
-<a class="text-sm font-semibold dark:text-slate-400 hover:text-primary transition-colors text-black text-zinc-600" href="#about">About Us</a>
-<a class="text-sm font-semibold dark:text-slate-400 hover:text-primary transition-colors text-black text-zinc-600" href="#blog">Blog</a>
-<a class="text-sm font-semibold dark:text-slate-400 hover:text-primary transition-colors text-black text-zinc-600" href="#contact">Contact</a>
+<a class="text-sm font-semibold dark:text-slate-400 hover:text-primary transition-colors text-black text-zinc-600" data-i18n="nav.services" href="index.html#services">Services</a>
+<a class="text-sm font-semibold dark:text-slate-400 hover:text-primary transition-colors text-black text-zinc-600" data-i18n="nav.about" href="index.html#about">About Us</a>
+<a class="text-sm font-semibold dark:text-slate-400 hover:text-primary transition-colors text-black text-zinc-600" data-i18n="nav.blog" href="index.html#blog">Blog</a>
+<a class="text-sm font-semibold dark:text-slate-400 hover:text-primary transition-colors text-black text-zinc-600" data-i18n="nav.contact" href="index.html#contact">Contact</a>
 </nav>
 <!-- Actions -->
 <div class="flex items-center gap-6">
 <!-- Search -->
 <div class="relative hidden sm:block">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
-<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg pl-10 pr-4 py-2 text-sm w-48 focus:ring-2 focus:ring-primary/20 focus:w-64 transition-all duration-300" placeholder="Search..." type="text"/>
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg pl-10 pr-4 py-2 text-sm w-48 focus:ring-2 focus:ring-primary/20 focus:w-64 transition-all duration-300" placeholder="Search..." data-i18n-placeholder="common.search.placeholder" type="text"/>
 </div>
 <!-- Language -->
 <button class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold tracking-wide uppercase flex items-center gap-2 hover:bg-primary/90 transition-all bg-[#e50615]" style="background-color: #e50615;">
@@ -332,4 +332,5 @@
 <p class="text-[10px] text-slate-400 uppercase tracking-widest">Powered by Altiben S.L.</p>
 </div>
 </div>
+<script src="assets/i18n.js" defer></script>
 </body></html>

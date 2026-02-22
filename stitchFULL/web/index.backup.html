@@ -66,14 +66,13 @@
 
     <!-- Main Nav -->
     <nav class="hidden md:flex items-center gap-10">
-      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="#top" data-i18n="nav.home">Главная</a>
-      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="#services" data-i18n="nav.services">Услуги</a>
-      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="#about" data-i18n="nav.about">О нас</a>
-      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="#blog" data-i18n="nav.blog">Блог</a>
-      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" href="#contact" data-i18n="nav.contact">Контакты</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" data-i18n="nav.home" href="index.html#top">Главная</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" data-i18n="nav.services" href="index.html#services">Услуги</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" data-i18n="nav.about" href="index.html#about">О нас</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" data-i18n="nav.blog" href="index.html#blog">Блог</a>
+      <a class="text-sm font-semibold hover:text-primary transition-colors text-zinc-600 dark:text-slate-300" data-i18n="nav.contact" href="index.html#contact">Контакты</a>
 
-      <a class="text-sm font-bold text-primary border-2 border-primary/20 hover:border-primary px-4 py-1.5 rounded-full transition-all flex items-center gap-2"
-         href="#assistant">
+      <a class="text-sm font-bold text-primary border-2 border-primary/20 hover:border-primary px-4 py-1.5 rounded-full transition-all flex items-center gap-2" data-i18n="nav.assistant" href="index.html#assistant">
         <span class="material-symbols-outlined text-sm">smart_toy</span>
         Ассистент Altiben 24/7
       </a>
@@ -85,35 +84,22 @@
       <div class="relative hidden sm:block">
         <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
         <input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg pl-10 pr-4 py-2 text-sm w-48 focus:ring-2 focus:ring-primary/20 focus:w-64 transition-all duration-300"
-               placeholder="Поиск..."
-               type="text"/ data-i18n-placeholder="common.search.placeholder">
+               placeholder="Поиск..." data-i18n-placeholder="common.search.placeholder"
+               type="text"/>
       </div>
 
       <!-- Language -->
-      <div class="relative group">
-        <button class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold tracking-wide uppercase flex items-center gap-2 hover:bg-primary/90 transition-all bg-[#e50615]"
-                style="background-color: #e50615;">
-          Languages
+      <div class="relative">
+        <button id="langBtn"
+                class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold tracking-wide uppercase flex items-center gap-2 hover:bg-primary/90 transition-all bg-[#e50615]"
+                style="background-color: #e50615;"
+                type="button">
+          <span id="langBtnLabel">RU</span>
           <span class="material-symbols-outlined text-sm">expand_more</span>
         </button>
-        <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-slate-100 dark:border-slate-800 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 max-h-96 overflow-y-auto"><a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=ru" data-lang="ru">Russian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=uk" data-lang="uk">Ukrainian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=en" data-lang="en">English</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=ar" data-lang="ar">Arabic</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=fr" data-lang="fr">French</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=ca" data-lang="ca">Catalan</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=bg" data-lang="bg">Bulgarian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=ro" data-lang="ro">Romanian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=sh" data-lang="sh">Serbo-Croatian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=sk" data-lang="sk">Slovak</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=et" data-lang="et">Estonian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=lt" data-lang="lt">Lithuanian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=lv" data-lang="lv">Latvian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=zh" data-lang="zh">Chinese</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=de" data-lang="de">German</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=it" data-lang="it">Italian</a>
-<a class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors" href="?lang=hu" data-lang="hu">Hungarian</a>
-</div>
+        <div id="langMenu"
+             class="absolute right-0 mt-2 w-64 bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-slate-100 dark:border-slate-800 py-2 hidden z-50 max-h-96 overflow-y-auto">
+        </div>
       </div>
     </div>
   </div>
@@ -142,14 +128,14 @@
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 pt-4">
-          <a href="#contact"
+          <a data-i18n="nav.contact" href="index.html#contact"
              class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 bg-[#e50615]"
              style="background-color: #e50615;">
             Записаться на консультацию
             <span class="material-symbols-outlined">arrow_forward</span>
           </a>
 
-          <a href="#about"
+          <a data-i18n="nav.about" href="index.html#about"
              class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all">
             Наш подход
           </a>
@@ -193,7 +179,7 @@
           <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
             Комплексное ведение бухгалтерии, уставная отчетность и стратегическая финансовая консолидация для вашей бизнес-экосистемы.
           </p>
-          <a class="font-bold flex items-center gap-1 hover:gap-3 transition-all text-[#e50615]" href="#contact">
+          <a class="font-bold flex items-center gap-1 hover:gap-3 transition-all text-[#e50615]" data-i18n="nav.contact" href="index.html#contact">
             Узнать больше
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
@@ -208,7 +194,7 @@
           <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
             Экспертное соблюдение налогового законодательства для местных и международных компаний, обеспечение оптимизации налогов.
           </p>
-          <a class="font-bold flex items-center gap-1 hover:gap-3 transition-all text-[#e50615]" href="#contact">
+          <a class="font-bold flex items-center gap-1 hover:gap-3 transition-all text-[#e50615]" data-i18n="nav.contact" href="index.html#contact">
             Узнать больше
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
@@ -223,7 +209,7 @@
           <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
             Обеспечение вашего будущего с помощью данных, консультаций по управлению капиталом и долгосрочных планов устойчивости.
           </p>
-          <a class="font-bold flex items-center gap-1 hover:gap-3 transition-all text-[#e50615]" href="#contact">
+          <a class="font-bold flex items-center gap-1 hover:gap-3 transition-all text-[#e50615]" data-i18n="nav.contact" href="index.html#contact">
             Узнать больше
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
@@ -319,7 +305,7 @@
         <article class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
           <h4 class="text-lg font-bold text-black dark:text-slate-100">НДС в Испании: базовые ошибки</h4>
           <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">Короткий чек-лист того, что чаще всего “ломает” отчётность.</p>
-          <a class="mt-5 inline-flex items-center gap-2 font-bold text-[#e50615]" href="#contact">
+          <a class="mt-5 inline-flex items-center gap-2 font-bold text-[#e50615]" data-i18n="nav.contact" href="index.html#contact">
             Задать вопрос <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
         </article>
@@ -327,7 +313,7 @@
         <article class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
           <h4 class="text-lg font-bold text-black dark:text-slate-100">Autónomo: что важно с первого месяца</h4>
           <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">Минимум бюрократии, максимум предсказуемости.</p>
-          <a class="mt-5 inline-flex items-center gap-2 font-bold text-[#e50615]" href="#contact">
+          <a class="mt-5 inline-flex items-center gap-2 font-bold text-[#e50615]" data-i18n="nav.contact" href="index.html#contact">
             Получить консультацию <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
         </article>
@@ -335,7 +321,7 @@
         <article class="p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
           <h4 class="text-lg font-bold text-black dark:text-slate-100">Проверка (inspección): как подготовиться</h4>
           <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">Что собирать заранее, чтобы не “потерять” время и нервы.</p>
-          <a class="mt-5 inline-flex items-center gap-2 font-bold text-[#e50615]" href="#contact">
+          <a class="mt-5 inline-flex items-center gap-2 font-bold text-[#e50615]" data-i18n="nav.contact" href="index.html#contact">
             Запросить аудит <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
         </article>
@@ -363,7 +349,7 @@
           </div>
         </div>
 
-        <a href="#contact"
+        <a data-i18n="nav.contact" href="index.html#contact"
            class="inline-flex items-center gap-2 bg-[#e50615] text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">
           Записаться через ассистента
           <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -377,7 +363,7 @@
     <div class="max-w-4xl mx-auto px-6 text-center text-white">
       <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">Готовы оптимизировать налоговую отчетность?</h2>
       <p class="text-xl opacity-80 mb-12">Свяжитесь с нами сегодня для конфиденциальной предварительной оценки вашей налоговой ситуации.</p>
-      <a href="#contact" class="bg-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-slate-100 transition-all shadow-xl text-[#e50615] inline-block">
+      <a data-i18n="nav.contact" href="index.html#contact" class="bg-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-slate-100 transition-all shadow-xl text-[#e50615] inline-block">
         Запланировать бесплатный звонок
       </a>
     </div>
